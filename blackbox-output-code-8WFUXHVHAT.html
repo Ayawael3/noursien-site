@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noursin | High-Quality Fertilizers & Pesticides</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS variables for consistent theming */
+        :root {
+            --primary-green: #2e7d32;
+            --light-green: #4caf50;
+            --dark-green: #1b5e20;
+            --lime-green: #8bc34a;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--dark-green);
+            transform: translateY(-3px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+            color: var(--white);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--light-green);
+            margin: 0.5rem auto;
+            border-radius: 2px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-menu li {
+            margin-left: 2rem;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary-green);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 5px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--lime-green) 100%);
+            color: var(--white);
+            padding: 8rem 0 5rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        /* Products Section */
+        .products {
+            background: var(--light-gray);
+        }
+        
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #ddd;
+        }
+        
+        .tab-btn {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary-green);
+        }
+        
+        .tab-btn.active:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary-green);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-description {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        /* About Section */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-content h2 {
+            color: var(--primary-green);
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: var(--light-gray);
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 1rem;
+        }
+        
+        .benefit-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+        
+        .testimonial-card:before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(46, 125, 50, 0.1);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--lime-green) 100%);
+            color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+        }
+        
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            color: var(--text-dark);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        #form-message {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-green);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links h4 {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .footer-links h4:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--light-green);
+            margin-top: 0.5rem;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--lime-green);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 70%;
+                height: calc(100vh - 70px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                right: 0;
+            }
+            
+            .nav-menu li {
+                margin: 1.5rem 0;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+ #about {
+  font-family: "Cairo", sans-serif;
+  direction: rtl; /* يخلي الكلام ييجي يمين تلقائي */
+  text-align: right;
+}
+
+#about .section-title {
+  font-size: 40px;
+  font-weight:800;
+  margin-bottom: 20px;
+  color: #004d25; /* أخضر غامق */
+}
+
+#about .about-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #006633; /* أخضر أفتح */
+}
+
+#about .about-content b {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+#about .about-content p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #333;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #004d25; /* أخضر غامق */
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 50px;   /* حجم اللوجو */
+  margin-right: 10px; /* مسافة صغيرة بين اللوجو والنص */
+}
+
+.logo-text {
+  font-size: 24px;
+}
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+<header>
+    <div class="header-container container">
+        <a href="#" class="logo">
+            <img src="لوجو.JPG" alt="Noursien Logo" class="logo-img">
+            <span class="logo-text">Noursien</span>
+        </a>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#products">المنتجات</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#benefits">المميزات</a></li>
+            <li><a href="#contact">تواصل معنا </a></li>
+        </ul>
+    </div>
+</header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Noursien Agricultural Solutions</h1>
+                <p>High-quality fertilizers and pesticides for modern agriculture</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">الذهاب الي المنتجات</a>
+                    <a href="#contact" class="btn btn-outline">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+        <div class="container">
+            <h1 class="section-title">المنتجات</h1>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="fertilizers">الاسمده والمخصبات</button>
+                <button class="tab-btn" data-tab="pesticides">المبيدات </button>
+            </div>
+            
+            <div id="fertilizers" class="tab-content active">
+                <!-- Fertilizer Product 1 -->
+                <div class="product-card">
+                    <img src="PLANTS.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Plants 0/33/57</h3>
+       <p class="product-description">    سماد مركب عالي الفوسفور والبوتاسيوم NPK 0-33-57 مدعّم بالسكريات الكحولية، الأحماض الأمينية، حمض الفولفيك، الطحالب البحرية، السيتوكينين والأوكسينات. يعمل على تنشيط التزهير وزيادة نسبة العقد، كما يساعد على تحسين جودة الثمار ورفع كفاءة امتصاص العناصر، مما يضمن إنتاجية أعلى وجودة أفضل للمحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+
+                  <div class="product-card">
+                    <img src="Convert 1 19-19-19.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">NPK 19/19/19</h3>
+                       <p class="product-description">سماد مركب متوازن NPK 19-19-19 مستورد من إيطاليا، يحتوي على النيتروجين والفوسفور والبوتاسيوم بنسب متساوية. يتميز بسرعة الذوبان وجاهزيته للاستخدام، ويساعد على تعزيز النمو الخضري والجذري، وتحسين الإزهار والعقد، وزيادة الإنتاجية وجودة المحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                
+                     <div class="product-card">
+                    <img src="ح.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">NPK 0/0/50 </h3>
+             <p class="product-description">سماد بوتاسيومي مركز NPK 0-0-50 إسباني المنشأ، مُضاف إليه أحماض أمينية وطحالب بحرية وحمض الفولفيك. يساعد على تحسين تحجيم وجودة الثمار، وزيادة صلابة ولون المحصول، كما يعزز مقاومة النبات للإجهاد والظروف المناخية القاسية.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                        <div class="product-card">
+                    <img src="اجرو لايف.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">NPK 20/20/20 </h3>
+             <p class="product-description">سماد مركب متوازن NPK 20-20-20 مستورد من تركيا، مُدعّم بالـسيتوكينات والأوكسينات لتعزيز النمو الخضري القوي والمتجانس. يتميز بسرعة الذوبان وجاهزيته للاستخدام مع أنظمة الري والرش الورقي، ويساعد على تحسين تكوين المجموع الخضري وزيادة كفاءة التمثيل الضوئي، مما ينعكس على قوة النبات وإنتاجيته.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                    <div class="product-card">
+                    <img src="6-6-43.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">NPK 6/6/43 </h3>
+             <p class="product-description">سماد مركب عالي البوتاسيوم NPK 6-6-43 مستورد من إيطاليا، سريع الذوبان وجاهز للاستخدام. يُستخدم في مرحلة التحجيم لزيادة حجم الثمار وتحسين جودتها ولونها، كما يعزز مقاومة النبات للظروف المناخية المختلفة ويضمن إنتاجية أعلى.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                  <div class="product-card">
+                    <img src="Agro life 20-20-20.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">NPK 20-20-20 </h3>
+             <p class="product-description">سماد مركب متوازن NPK 20-20-20 مستورد من تركيا، مُدعّم بالـسيتوكينات والأوكسينات لتعزيز النمو الخضري القوي والمتجانس. يتميز بسرعة الذوبان وجاهزيته للاستخدام مع أنظمة الري والرش الورقي، ويساعد على تحسين تكوين المجموع الخضري وزيادة كفاءة التمثيل الضوئي، مما ينعكس على قوة النبات وإنتاجيته.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                        <div class="product-card">
+                    <img src="humic.jpg" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Humic sen 85% </h3>
+             <p class="product-description">منتج هيومك سين مستورد من ألمانيا، مُدعّم بالطحالب البحرية لزيادة حيوية النبات وتحفيز نمو الجذور. يساعد على تحسين خصوبة التربة ورفع كفاءة امتصاص العناصر الغذائية، كما يعزز مقاومة النبات للإجهاد ويزيد من قوة النمو والإنتاجية.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                        <div class="product-card">
+                    <img src="fulvic.jpg" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Volvic sen 85% </h3>
+             <p class="product-description">منتج فولفيك سين 85% مستورد من ألمانيا، عالي النقاء ومدعّم بمركب الإندول لتحفيز نمو الجذور وزيادة كفاءة امتصاص العناصر الغذائية. يعمل على تنشيط حيوية النبات، وتحسين التمثيل الغذائي، ورفع مقاومة الإجهاد، مما ينعكس على قوة النمو والإنتاجية وجودة المحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div id="pesticides" class="tab-content">
+                <!-- Pesticide Product 1 -->
+           
+                          <div class="product-card">
+                    <img src="لاكسوميل.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">LaKsomiL </h3>
+              <p class="product-description">مبيد فطري لاكسوميل يجمع بين المانكوزيب والميتالكسيل والكبريت، بتركيبة فعّالة ذات تأثير وقائي وعلاجي في نفس الوقت. يعمل على مكافحة مجموعة واسعة من الأمراض الفطرية، ويحمي النبات من العدوى الجديدة مع إيقاف تطور الإصابات القائمة، مما يضمن محصولًا صحيًا وإنتاجية أعلى.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                            <div class="product-card">
+                    <img src="رفروسيل… الحماية الأقوى ضد الفطريات!.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Revrosil </h3>
+      <p class="product-description">مبيد فطري رفروسيل متخصص في مكافحة البياض الدقيقي والزغبي، وفعّال ضد جميع أنواع الندوات الفطرية. يتميز بفاعلية عالية وسرعة في إيقاف انتشار العدوى، مما يحافظ على سلامة المحصول ويزيد من إنتاجيته وجودته.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                           <div class="product-card">
+                    <img src="OXY-COPPEER 43.5%.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title"> OXY-COPPEER 43.5%</h3>
+           <p class="product-description">مبيد فطري إكس كوبر بلس تركيبة متكاملة تجمع بين النحاس، المانكوزيب، الميتالكسيل، والسيموكسينيل. يوفر حماية وقائية وعلاجية قوية ضد مجموعة واسعة من الأمراض الفطرية، ويعمل على وقف تطور العدوى وحماية النبات لفترة طويلة، مما يضمن محصولًا صحيًا وإنتاجية مرتفعة.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                            <div class="product-card">
+                    <img src="نارومكس.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Naromix</h3>
+          <p class="product-description">مبيد حشري نارومكس مركب قوي وفعّال لمكافحة الذبابة والدودة والمنّ والتربس. يتميز بسرعة التأثير وفعاليته العالية في القضاء على الآفات، مما يحافظ على قوة النبات ويضمن إنتاجية وجودة أعلى للمحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                             <div class="product-card">
+                    <img src="Untitled design.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Totasien  </h3>
+           <p class="product-description">مبيد حشري توتاسين متخصص وفعّال في مكافحة آفة توتا أبسلوتا التي تصيب محصول الطماطم. يتميز بسرعة التأثير في وقف انتشار الإصابة وحماية الأوراق والثمار، مما يضمن حصادًا صحيًا وجودة أعلى للمحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <img src="SUPER MACTINOS.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">SuperMactinor </h3>
+        <p class="product-description">مبيد أكاروسي سوبر مكتينور فعّال ضد الأكاروس بجميع أطواره الكاملة، ويتميز بقوة تأثيره وسرعته في القضاء على الإصابة. يضمن حماية المحصول والمحافظة على حيوية النبات وجودة الإنتاج.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <img src="LAMBADA 10.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Lambada 10% </h3>
+             <p class="product-description">مبيد حشري لمباسين 10% واسع المدى، فعّال في مكافحة العديد من الآفات الحشرية مثل الذبابة البيضاء، المنّ، التربس، والديدان. يتميز بسرعة التأثير وقوة الفاعلية، مما يضمن حماية النبات والمحصول والحفاظ على إنتاجية وجودة عالية.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                <div class="product-card">
+                    <img src="LAMBADA 5.png" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Lambada 5% </h3>
+       <p class="product-description">مبيد حشري لمباسين 5% فعّال ضد مجموعة واسعة من الآفات مثل الذبابة البيضاء، المنّ، التربس، والديدان. يتميز بسرعة التأثير وقدرته على حماية النبات في المراحل المبكرة، مما يساهم في تقليل الإصابات والحفاظ على جودة وإنتاجية المحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                 <div class="product-card">
+                    <img src="بيتاسين.jpg" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">betasine 12.5%</h3>
+       <p class="product-description">مبيد حشري Betasine 12.5% واسع المدى، فعّال في مكافحة الآفات الحشرية المختلفة مثل المنّ، التربس، الذبابة البيضاء، والديدان. يتميز بسرعة التأثير وقوة الأداء، مما يضمن حماية النبات من الإصابات ويحافظ على جودة وإنتاجية المحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                    <div class="product-card">
+                    <img src="استيانيو.jpg" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Asitanew </h3>
+       <p class="product-description">مبيد حشري Asitanew فعّال لمكافحة الذبابة والتربس والهاموس. يتميز بتركيبة قوية وسرعة تأثير في القضاء على الآفات، مما يحافظ على سلامة النبات ويزيد من جودة وإنتاجية المحصول.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+                                    <div class="product-card">
+                    <img src="مكتنيور (1).jpg" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">Mactinor</h3>
+       <p class="product-description">مبيد أكاروسي Mactinor متخصص في مكافحة الأكاروس بجميع أطواره المختلفة. يتميز بسرعة التأثير وقوة الفعالية، مما يضمن حماية أوراق النبات من الأضرار ويحافظ على قوة النمو وجودة الإنتاج.</p>
+                        <button class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h1 class="section-title">من نحن</h1>
+            <div class="about-container">
+                <div class="about-image-container">
+                    <img src="about.jpg" alt="Noursin agricultural specialists in a green field" class="about-image">
+                </div>
+                <div class="about-content">
+                    <h2>نبذه عنا </h2>
+                    <b>شركة نورسين للأسمدة والمبيدات والمخصبات الزراعية (ش.م.م)</b>
+                    <p>تأسست عام 2015، وهي شركة مساهمة رائدة في مجال الاستثمار الزراعي، متخصصة في استيراد وتوزيع الأسمدة والمبيدات والمخصبات. استطاعت منذ نشأتها أن تبني شراكات استراتيجية مع كبرى الوكالات العالمية مثل (K+S KALI GMBH – ألمانيا، ZERUVA – تركيا، SONAR AGRO – إسبانيا، Italpollina S.p.a – إيطاليا)، مما عزز مكانتها كأحد أهم الموردين في السوق المصري.
+تلتزم الشركة بتقديم حلول مبتكرة تلبي احتياجات المزارع المصرية وتساهم في رفع جودة وإنتاجية القطاع الزراعي، وقد نجحت في خدمة كبرى المزارع مثل مزارع دلتافارم، مزارع البنا، مزارع سيرابيوم، مزارع الجبر، ومزارع حلوان، وغيرها، بما يعكس ثقة عملائها في جودة منتجاتها والتزامها بأعلى معايير الجودة.</p>
+                 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="section benefits">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار نورسين</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="benefit-title">خبرة موثوقة</h3>
+                    <p> أكثر من 10 سنوات في مجال الأسمدة والمبيدات والمخصبات الزراعية</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="benefit-title">شراكات دولية</h3>
+                    <p>وكالات حصرية من كبرى الشركات العالمية في ألمانيا، إيطاليا، إسبانيا وتركيا.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="benefit-title">أعلى معايير الجودة</h3>
+                    <p>منتجات معتمدة تضمن الكفاءة والأمان والثبات في النتائج.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 class="benefit-title">دعم فني مستمر</h3>
+                    <p>إرشاد وخدمة ما بعد البيع لمساندة المزارع وتحقيق أفضل النتائج.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p>+20 1129144314</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>nourseincompany@gmail.com</p>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>شارع محمد علي - برج الصفوة  -- الدور السادس - الاسماعيلية</p>
+                    </div>
+                    
+                    <a href="https://wa.me/201129144314" class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        
+                        <div id="form-message" class="success"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Noursin</div>
+                    <p>Providing quality agricultural solutions since 2002. Helping farmers grow better crops for a better future.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#benefits">Benefits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Fertilizers</a></li>
+                        <li><a href="#products">Pesticides</a></li>
+                        <li><a href="#products">Organic Solutions</a></li>
+                        <li><a href="#products">Specialty Products</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +20 1129144314</li>
+                        <li><i class="fas fa-envelope"></i> nourseincompany@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> شارع محمد علي - برج الصفوة  -- الدور السادس - الاسماعيلية</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2023 Noursin Agricultural Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+        
+        // Tab Switching for Products
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Contact Form Handling
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulate form submission success
+            formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
+            formMessage.classList.add('success');
+            formMessage.style.display = 'block';
+            
+            // Clear form
+            contactForm.reset();
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
